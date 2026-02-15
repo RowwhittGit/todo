@@ -1,0 +1,58 @@
+/* App.css - Component specific styles */
+
+/* Smooth color transitions */
+.transition-colors {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Smooth all property transitions */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Custom input and textarea focus states */
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Dark mode scrollbar adjustments */
+.dark {
+  color-scheme: dark;
+}
+
+/* Prevent flashing on page load */
+html {
+  background: white;
+}
+
+html.dark {
+  background: #111827;
+}
+
+/* Smooth page transitions */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Ensure minimum height for empty states */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+/* Custom loading animation */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
